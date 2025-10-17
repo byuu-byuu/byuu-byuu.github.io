@@ -1,0 +1,126 @@
+body {
+      font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            background-image: url('classroom.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: #050A44;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 10px;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+			padding-left:20px
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 8px 12px;
+            border-radius: 20px 0px 20px 0px ;
+        }
+
+        .nav-links a:hover {
+            background-color: white;
+			color: blue;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 80%;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+        }
+
+        h1 {
+            color: white;
+			font-size:30px;
+			background-color: #050A44;
+			padding:10px;
+			border-radius:20px;
+			align:center;
+        }
+		h4{font-size:40px;
+			color: white;
+			background-color:#050A44;
+			padding:20px;
+			}
+	.classes-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .class-item {
+            margin-bottom: 20px;
+        }
+
+        .class-item img {
+            width: 30%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 10px;
+			border:solid 3px;
+        }
+        .group-members {
+            text-align: left;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .group-members th, .group-members td {
+            padding: 16px;
+            border-bottom: 2px dashed black;
+			text-align:center;
+			font-size:20px;
+        }
+		 .footer {
+            margin-top: 20px;}
+		a{text-decoration:none;
+			color:#050A44;
+			font-size: 20px;}
+		a:hover{color: black;}
+	h3{padding: fixed;
+		font-size:20px;}
+	 button {
+            background-color: #050A44;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+			font-size:20px;
+        }
+        button:hover {
+            background-color: #333;}
+		p{font-size:20px;}
+	h2{font-size:30px;
+		background-color: #050A44;
+		padding:20px;
+		border-radius:20px;
+	color: white;}

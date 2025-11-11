@@ -1,0 +1,133 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+/* page body (adjust as you need) */
+body {
+  min-height: 100vh;
+  background-color: #ffc851;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* container: horizontal list of cards */
+.container {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  max-width: 1100px;
+  align-items: stretch;
+}
+
+/* each card */
+.container li {
+  position: relative;
+  flex: 1 1 0;               /* flexible cards */
+  min-width: 220px;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: #222;          /* fallback while image loads */
+  transition: flex 0.45s cubic-bezier(.2,.9,.2,1), transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* make hovered card grow */
+.container li:hover {
+  flex: 2 1 0;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+  z-index: 5;
+}
+
+/* image fills card */
+.container li img {
+  position: absolute;
+  inset: 0;                   /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* slightly zoom image on hover */
+.container li:hover img {
+  transform: scale(1.06);
+}
+
+/* overlay content (hidden by default slightly) */
+.container li .content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 18px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.8) 100%);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+/* when card hovered, show overlay */
+.container li:hover .content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* headings inside card */
+.container li .content h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+/* paragraph and lists */
+.container li .content p,
+.container li .content ul {
+  font-size: 14px;
+  color: #f0f0f0;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* skills list inside card (if used) */
+.container li .content ul {
+  list-style: disc;
+  padding-left: 18px;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #4c82ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover { background: #2b60d8; transform: translateY(-2px); }
+
+/* responsive */
+@media (max-width: 900px) {
+  .container { gap: 12px; }
+  .container li { height: 280px; min-width: 180px; }
+}
+
+@media (max-width: 600px) {
+  /* stack vertically on small screens */
+  .container {
+    flex-direction: column;
+    max-width: 420px;
+  }
+  .container li { width: 100%; height: 240px; }
+}
